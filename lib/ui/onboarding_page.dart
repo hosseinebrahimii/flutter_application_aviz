@@ -45,10 +45,12 @@ class OnboardingPage extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text(
+            Text(
               'اینجا محل',
               style: TextStyle(
                 fontFamily: 'SB',
+                fontWeight: FontWeight.w700,
+                color: AppColors.maintitleColor,
                 fontSize: 16,
               ),
             ),
@@ -61,12 +63,12 @@ class OnboardingPage extends StatelessWidget {
             const SizedBox(
               width: 5,
             ),
-            const Text(
+            Text(
               'آگهی شماست',
               style: TextStyle(
-                fontFamily: 'Shabnam',
+                fontFamily: 'SB',
                 fontWeight: FontWeight.w700,
-                color: Color(0xFF101828),
+                color: AppColors.maintitleColor,
                 fontSize: 16,
               ),
             ),
@@ -76,7 +78,7 @@ class OnboardingPage extends StatelessWidget {
           height: 16,
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 35),
+          padding: const EdgeInsets.symmetric(horizontal: 40),
           child: Text(
             'در آویز ملک خود را برای فروش،اجاره و رهن آگهی کنید و یا اگر دنبال ملک با مشخصات دلخواه خود هستید آویز ها را ببینید',
             textAlign: TextAlign.center,
@@ -85,6 +87,7 @@ class OnboardingPage extends StatelessWidget {
               color: AppColors.subtitleColor,
               fontWeight: FontWeight.w400,
               fontSize: 16,
+              height: 1.5,
             ),
           ),
         ),
@@ -108,6 +111,20 @@ class OnboardingPage extends StatelessWidget {
   ElevatedButton _signUpButton() {
     return ElevatedButton(
       onPressed: () {},
+      style: ElevatedButton.styleFrom(
+        fixedSize: const Size(159, 40),
+        backgroundColor: AppColors.buttonColor,
+        elevation: 0,
+        textStyle: const TextStyle(
+          fontFamily: 'SM',
+          fontWeight: FontWeight.w500,
+          fontSize: 16,
+        ),
+        foregroundColor: AppColors.backgroundColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(4),
+        ),
+      ),
       child: const Text('ثبت نام'),
     );
   }
@@ -115,6 +132,21 @@ class OnboardingPage extends StatelessWidget {
   OutlinedButton _signInButton() {
     return OutlinedButton(
       onPressed: () {},
+      style: OutlinedButton.styleFrom(
+        fixedSize: const Size(159, 40),
+        textStyle: const TextStyle(
+          fontFamily: 'SM',
+          fontWeight: FontWeight.w500,
+          fontSize: 16,
+        ),
+        foregroundColor: AppColors.buttonColor,
+        side: BorderSide(
+          color: AppColors.buttonColor,
+        ),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(4),
+        ),
+      ),
       child: const Text('ورود'),
     );
   }
