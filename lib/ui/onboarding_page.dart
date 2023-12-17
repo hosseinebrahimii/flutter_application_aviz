@@ -18,7 +18,7 @@ class OnboardingPage extends StatelessWidget {
                 height: 56,
                 width: double.infinity,
               ),
-              _boardingPageView(),
+              _onboardingPageView(),
               const Spacer(),
               _buttons(),
               const SizedBox(
@@ -31,7 +31,9 @@ class OnboardingPage extends StatelessWidget {
     );
   }
 
-  Widget _boardingPageView() {
+  Widget _onboardingPageView() {
+    // this widget gives user initial info about the app
+    // before the user signs in or signs up
     return Column(
       children: [
         Image.asset(
