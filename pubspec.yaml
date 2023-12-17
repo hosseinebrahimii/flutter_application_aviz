@@ -29,6 +29,13 @@ flutter:
 
 
   fonts:
+    - family: SB
+      fonts:
+        - asset: assets/fonts/ShabnamBold.ttf
+    - family: SM
+      fonts:
+        - asset: assets/fonts/ShabnamMedium.ttf
+
     - family: Shabnam
       fonts:
         - asset: assets/fonts/Shabnam.ttf
