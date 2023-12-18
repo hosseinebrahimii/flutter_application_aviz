@@ -16,4 +16,8 @@ class AppColors {
   //TextField:
   static Color textFieldHintColor = const Color(0xffD0D5DD);
   static Color textFieldBackgroundColor = const Color(0xffF9FAFB);
+
+  //TextFormField:
+  static Color textFormFieldWithNumberBackgroundColor = const Color(0xffEAECF0);
+  static Color textFormFieldWithoutNumberBackgroundColor = const Color(0xffF9FAFB);
 }
