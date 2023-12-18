@@ -15,6 +15,19 @@ class AvizApp extends StatelessWidget {
       title: 'Aviz',
       theme: ThemeData(
         //
+        // inputDecotionTheme for TextField:
+        inputDecorationTheme: InputDecorationTheme(
+          hintStyle: TextStyle(
+            fontFamily: 'SM',
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: AppColors.textFieldHintColor,
+          ),
+          filled: true,
+          fillColor: AppColors.textFieldBackgroundColor,
+          border: InputBorder.none,
+        ),
+        //
         // ElevatedButton theme:
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
@@ -59,6 +72,13 @@ class AvizApp extends StatelessWidget {
             color: AppColors.black,
             fontSize: 16,
           ),
+          // some titles: SM 500 14
+          titleSmall: TextStyle(
+            fontFamily: 'SM',
+            fontWeight: FontWeight.w500,
+            fontSize: 14,
+            color: AppColors.red,
+          ),
           // main body descriptions: Shabnam 400 16
           bodyLarge: TextStyle(
             fontFamily: 'Shabnam',
@@ -66,6 +86,13 @@ class AvizApp extends StatelessWidget {
             fontWeight: FontWeight.w400,
             fontSize: 16,
             height: 1.5,
+          ),
+          // some descriptions : Shabnam 400 14
+          bodySmall: TextStyle(
+            fontFamily: 'Shabnam',
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+            color: AppColors.lighterGrey,
           ),
         ),
       ),
