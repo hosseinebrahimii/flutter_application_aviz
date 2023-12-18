@@ -36,10 +36,23 @@ class OnboardingPage extends StatelessWidget {
     // before the user signs in or signs up
     return Column(
       children: [
-        Image.asset(
-          'assets/images/onboarding_page/onboarding1.jpg',
-          width: 225,
-          height: 225,
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            const SizedBox(
+              height: 56,
+              width: double.infinity,
+            ),
+            Image.asset(
+              'assets/images/onboarding_page/onboardingBackground.png',
+              scale: 0.9,
+            ),
+            Image.asset(
+              'assets/images/onboarding_page/onboarding1.png',
+              width: 225,
+              height: 225,
+            ),
+          ],
         ),
         const SizedBox(
           height: 32,
@@ -55,7 +68,7 @@ class OnboardingPage extends StatelessWidget {
               width: 5,
             ),
             Image.asset(
-              'assets/images/onboarding_page/onboarding2.jpg',
+              'assets/images/onboarding_page/onboarding2.png',
             ),
             const SizedBox(
               width: 5,
