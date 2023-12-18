@@ -113,7 +113,6 @@ class OnboardingPage extends StatelessWidget {
       height: 40,
       child: ElevatedButton(
         onPressed: () {},
-        style: Theme.of(context).elevatedButtonTheme.style,
         child: const Text('ثبت نام'),
       ),
     );
@@ -125,7 +124,6 @@ class OnboardingPage extends StatelessWidget {
       height: 40,
       child: OutlinedButton(
         onPressed: () {},
-        style: Theme.of(context).outlinedButtonTheme.style,
         child: const Text('ورود'),
       ),
     );
