@@ -18,7 +18,7 @@ class AvizApp extends StatelessWidget {
         // ElevatedButton theme:
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-            backgroundColor: AppColors.buttonColor,
+            backgroundColor: AppColors.buttonColorRed,
             elevation: 0,
             textStyle: const TextStyle(
               fontFamily: 'SM',
@@ -40,9 +40,9 @@ class AvizApp extends StatelessWidget {
               fontWeight: FontWeight.w500,
               fontSize: 16,
             ),
-            foregroundColor: AppColors.buttonColor,
+            foregroundColor: AppColors.buttonColorRed,
             side: BorderSide(
-              color: AppColors.buttonColor,
+              color: AppColors.buttonColorRed,
             ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(4),
@@ -56,13 +56,13 @@ class AvizApp extends StatelessWidget {
           titleLarge: TextStyle(
             fontFamily: 'SB',
             fontWeight: FontWeight.w700,
-            color: AppColors.maintitleColor,
+            color: AppColors.black,
             fontSize: 16,
           ),
           // main body descriptions: Shabnam 400 16
           bodyLarge: TextStyle(
             fontFamily: 'Shabnam',
-            color: AppColors.subtitleColor,
+            color: AppColors.lightGrey,
             fontWeight: FontWeight.w400,
             fontSize: 16,
             height: 1.5,
