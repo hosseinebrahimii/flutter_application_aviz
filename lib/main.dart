@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
-import 'package:flutter_application_aviz/ui/0.onboarding_page.dart';
+import 'package:flutter_application_aviz/ui/1.1.sign_in_page.dart';
 
 void main() {
   runApp(const AvizApp());
@@ -69,7 +69,7 @@ class AvizApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const OnboardingPage(),
+      home: const SignInPage(),
     );
   }
 }

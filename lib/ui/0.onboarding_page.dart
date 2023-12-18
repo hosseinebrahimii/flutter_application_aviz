@@ -44,11 +44,11 @@ class OnboardingPage extends StatelessWidget {
               width: double.infinity,
             ),
             Image.asset(
-              'assets/images/onboarding_page/onboardingBackground.png',
+              'assets/images/onboardingBackground.png',
               scale: 0.9,
             ),
             Image.asset(
-              'assets/images/onboarding_page/onboarding1.png',
+              'assets/images/onboarding1.png',
               width: 225,
               height: 225,
             ),
@@ -68,7 +68,7 @@ class OnboardingPage extends StatelessWidget {
               width: 5,
             ),
             Image.asset(
-              'assets/images/onboarding_page/onboarding2.png',
+              'assets/images/aviz.png',
             ),
             const SizedBox(
               width: 5,
