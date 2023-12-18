@@ -18,9 +18,9 @@ class OnboardingPage extends StatelessWidget {
                 height: 56,
                 width: double.infinity,
               ),
-              _onboardingPageView(),
+              _onboardingPageView(context),
               const Spacer(),
-              _buttons(),
+              _buttons(context),
               const SizedBox(
                 height: 22,
               ),
@@ -31,7 +31,7 @@ class OnboardingPage extends StatelessWidget {
     );
   }
 
-  Widget _onboardingPageView() {
+  Widget _onboardingPageView(BuildContext context) {
     // this widget gives user initial info about the app
     // before the user signs in or signs up
     return Column(
@@ -49,12 +49,7 @@ class OnboardingPage extends StatelessWidget {
           children: [
             Text(
               'اینجا محل',
-              style: TextStyle(
-                fontFamily: 'SB',
-                fontWeight: FontWeight.w700,
-                color: AppColors.maintitleColor,
-                fontSize: 16,
-              ),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(
               width: 5,
@@ -67,12 +62,7 @@ class OnboardingPage extends StatelessWidget {
             ),
             Text(
               'آگهی شماست',
-              style: TextStyle(
-                fontFamily: 'SB',
-                fontWeight: FontWeight.w700,
-                color: AppColors.maintitleColor,
-                fontSize: 16,
-              ),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ],
         ),
@@ -84,72 +74,47 @@ class OnboardingPage extends StatelessWidget {
           child: Text(
             'در آویز ملک خود را برای فروش،اجاره و رهن آگهی کنید و یا اگر دنبال ملک با مشخصات دلخواه خود هستید آویز ها را ببینید',
             textAlign: TextAlign.center,
-            style: TextStyle(
-              fontFamily: 'Shabnam',
-              color: AppColors.subtitleColor,
-              fontWeight: FontWeight.w400,
-              fontSize: 16,
-              height: 1.5,
-            ),
+            style: Theme.of(context).textTheme.bodyLarge,
           ),
         ),
       ],
     );
   }
 
-  Row _buttons() {
+  Row _buttons(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        _signUpButton(),
+        _signUpButton(context),
         const SizedBox(
           width: 25,
         ),
-        _signInButton(),
+        _signInButton(context),
       ],
     );
   }
 
-  ElevatedButton _signUpButton() {
-    return ElevatedButton(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        fixedSize: const Size(159, 40),
-        backgroundColor: AppColors.buttonColor,
-        elevation: 0,
-        textStyle: const TextStyle(
-          fontFamily: 'SM',
-          fontWeight: FontWeight.w500,
-          fontSize: 16,
-        ),
-        foregroundColor: AppColors.backgroundColor,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4),
-        ),
+  Widget _signUpButton(BuildContext context) {
+    return SizedBox(
+      width: 159,
+      height: 40,
+      child: ElevatedButton(
+        onPressed: () {},
+        style: Theme.of(context).elevatedButtonTheme.style,
+        child: const Text('ثبت نام'),
       ),
-      child: const Text('ثبت نام'),
     );
   }
 
-  OutlinedButton _signInButton() {
-    return OutlinedButton(
-      onPressed: () {},
-      style: OutlinedButton.styleFrom(
-        fixedSize: const Size(159, 40),
-        textStyle: const TextStyle(
-          fontFamily: 'SM',
-          fontWeight: FontWeight.w500,
-          fontSize: 16,
-        ),
-        foregroundColor: AppColors.buttonColor,
-        side: BorderSide(
-          color: AppColors.buttonColor,
-        ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(4),
-        ),
+  Widget _signInButton(BuildContext context) {
+    return SizedBox(
+      width: 159,
+      height: 40,
+      child: OutlinedButton(
+        onPressed: () {},
+        style: Theme.of(context).outlinedButtonTheme.style,
+        child: const Text('ورود'),
       ),
-      child: const Text('ورود'),
     );
   }
 }
