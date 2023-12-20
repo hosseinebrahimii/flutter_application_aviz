@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({super.key});
+  SignInPage({super.key});
+  final TextEditingController _numberController = TextEditingController(text: '');
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,10 @@ class SignInPage extends StatelessWidget {
                 const SizedBox(
                   height: 32,
                 ),
-                phoneNumberTextField(context),
+                phoneNumberTextField(
+                  context,
+                  _numberController,
+                ),
                 const Spacer(),
                 nextStepButton(),
                 const SizedBox(
@@ -69,12 +73,13 @@ class SignInPage extends StatelessWidget {
     );
   }
 
-  Widget phoneNumberTextField(BuildContext context) {
+  Widget phoneNumberTextField(BuildContext context, TextEditingController controller) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(4),
-      child: const TextField(
+      child: TextField(
+        controller: controller,
         keyboardType: TextInputType.number,
-        decoration: InputDecoration(
+        decoration: const InputDecoration(
           //other decoration options were tuned in theme in them main.dart file
           hintText: 'شماره موبایل',
         ),
