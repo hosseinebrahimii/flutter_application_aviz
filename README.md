@@ -1,7 +1,7 @@
 # flutter_application_aviz
 
-A new Flutter project.
-
+this is a work in progress,
+this app is a palce where you can trade real states throw ads.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
