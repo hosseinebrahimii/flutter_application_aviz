@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class AppColors {
   //Ui:
   static Color backgroundColor = const Color(0xffFFFFFF);
+  static Color boxShadowColor = const Color(0x05000000);
 
   //Buttons:
   static Color buttonColorRed = const Color(0xffE60023);
@@ -12,6 +13,7 @@ class AppColors {
   static Color lightGrey = const Color(0xff98A2B3);
   static Color lighterGrey = const Color(0xffD0D5DD);
   static Color red = const Color(0xffE60023);
+  static Color textBackgroundColor = const Color(0xffF9FAFB);
 
   //TextField:
   static Color textFieldHintColor = const Color(0xffD0D5DD);
