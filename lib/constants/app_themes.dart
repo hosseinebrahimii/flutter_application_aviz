@@ -62,6 +62,15 @@ class AppThemes {
           color: AppColors.black,
           fontSize: 16,
         ),
+        // SB 700 14 black
+        titleMedium: TextStyle(
+          fontFamily: 'SB',
+          fontWeight: FontWeight.w700,
+          color: AppColors.black,
+          fontSize: 14,
+          overflow: TextOverflow.ellipsis,
+        ),
+
         // SM 500 14 red
         titleSmall: TextStyle(
           fontFamily: 'SM',
@@ -90,6 +99,29 @@ class AppThemes {
           fontWeight: FontWeight.w400,
           fontSize: 14,
           color: AppColors.lighterGrey,
+        ),
+        // Shabnam 500 12 black
+        labelMedium: TextStyle(
+          fontFamily: 'SM',
+          fontWeight: FontWeight.w500,
+          fontSize: 12,
+          color: AppColors.black,
+        ),
+        // Shabnam 400 12 lightGrey
+        labelSmall: TextStyle(
+          fontFamily: 'Shabnam',
+          fontWeight: FontWeight.w400,
+          fontSize: 12,
+          color: AppColors.lightGrey,
+          overflow: TextOverflow.ellipsis,
+          letterSpacing: 0,
+        ),
+        // SM 500 12 red
+        displaySmall: TextStyle(
+          fontFamily: 'SM',
+          fontWeight: FontWeight.w500,
+          fontSize: 12,
+          color: AppColors.red,
         ),
       ),
     );
