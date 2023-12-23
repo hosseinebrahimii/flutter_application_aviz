@@ -62,21 +62,12 @@ class AppThemes {
           color: AppColors.black,
           fontSize: 16,
         ),
-        // SB 700 14 black
-        titleMedium: TextStyle(
-          fontFamily: 'SB',
-          fontWeight: FontWeight.w700,
+        // Shabnam 400 16 black
+        headlineLarge: TextStyle(
+          fontFamily: 'Shabnam',
+          fontWeight: FontWeight.w400,
           color: AppColors.black,
-          fontSize: 14,
-          overflow: TextOverflow.ellipsis,
-        ),
-
-        // SM 500 14 red
-        titleSmall: TextStyle(
-          fontFamily: 'SM',
-          fontWeight: FontWeight.w500,
-          fontSize: 14,
-          color: AppColors.red,
+          fontSize: 16,
         ),
         // Shabnam 400 15 lightGrey
         bodyLarge: TextStyle(
@@ -93,12 +84,13 @@ class AppThemes {
           fontWeight: FontWeight.w500,
           fontSize: 14,
         ),
-        // Shabnam 400 14 lighterGrey
-        bodySmall: TextStyle(
-          fontFamily: 'Shabnam',
-          fontWeight: FontWeight.w400,
+        // SB 700 14 black
+        titleMedium: TextStyle(
+          fontFamily: 'SB',
+          fontWeight: FontWeight.w700,
+          color: AppColors.black,
           fontSize: 14,
-          color: AppColors.lighterGrey,
+          overflow: TextOverflow.ellipsis,
         ),
         // Shabnam 500 12 black
         labelMedium: TextStyle(
@@ -106,6 +98,20 @@ class AppThemes {
           fontWeight: FontWeight.w500,
           fontSize: 12,
           color: AppColors.black,
+        ),
+        // SM 500 14 red
+        titleSmall: TextStyle(
+          fontFamily: 'SM',
+          fontWeight: FontWeight.w500,
+          fontSize: 14,
+          color: AppColors.red,
+        ),
+        // Shabnam 400 14 lighterGrey
+        bodySmall: TextStyle(
+          fontFamily: 'Shabnam',
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
+          color: AppColors.lighterGrey,
         ),
         // Shabnam 400 12 lightGrey
         labelSmall: TextStyle(
