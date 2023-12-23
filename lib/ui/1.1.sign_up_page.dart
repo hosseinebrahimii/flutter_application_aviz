@@ -114,11 +114,11 @@ class SignUpPage extends StatelessWidget {
       height: 40,
       child: ElevatedButton(
         onPressed: () {},
-        child: const Row(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('مرحله بعد'),
-            Icon(Icons.chevron_right),
+            const Text('مرحله بعد'),
+            Image.asset('assets/images/arrowLeft.png'),
           ],
         ),
       ),
