@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
 import 'package:flutter_application_aviz/widgets/progress_indicator.dart';
 
-class ParentCategoryPage extends StatelessWidget {
-  ParentCategoryPage({super.key});
+class RegisterAdCategory1Page extends StatelessWidget {
+  RegisterAdCategory1Page({super.key});
   final List<String> categoryNames = [
     'اجاره مسکونی',
     'فروش مسکونی',
