@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
+import 'package:flutter_application_aviz/widgets/progress_indicator.dart';
 
 class ChildCategoryPage extends StatelessWidget {
   ChildCategoryPage({super.key});
@@ -22,7 +23,7 @@ class ChildCategoryPage extends StatelessWidget {
               const SizedBox(
                 width: double.infinity,
               ),
-              _progressIndicator(),
+              const ProgressIndicatorWidget(percentage: 20),
               const SizedBox(
                 height: 32,
               ),
@@ -63,14 +64,6 @@ class ChildCategoryPage extends StatelessWidget {
           Image.asset('assets/images/closeSquare.png')
         ],
       ),
-    );
-  }
-
-  Container _progressIndicator() {
-    return Container(
-      height: 4,
-      width: 75,
-      color: AppColors.red,
     );
   }
 
