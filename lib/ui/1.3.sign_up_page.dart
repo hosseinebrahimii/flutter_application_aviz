@@ -81,7 +81,10 @@ class SignUpPage extends StatelessWidget {
     );
   }
 
-  Widget nameTextField(BuildContext context, TextEditingController controller) {
+  Widget nameTextField(
+    BuildContext context,
+    TextEditingController controller,
+  ) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(4),
       child: TextField(
@@ -95,7 +98,10 @@ class SignUpPage extends StatelessWidget {
     );
   }
 
-  Widget phoneNumberTextField(BuildContext context, TextEditingController controller) {
+  Widget phoneNumberTextField(
+    BuildContext context,
+    TextEditingController controller,
+  ) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(4),
       child: TextField(
