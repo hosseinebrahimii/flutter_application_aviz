@@ -5,6 +5,7 @@ class AppColors {
   static Color backgroundColor = const Color(0xffFFFFFF);
   static Color boxShadowColor = const Color(0x05000000);
   static Color borderColor = const Color(0xffF2F4F7);
+  static Color expandIconColor = const Color(0xff292D32);
 
   //Buttons:
   static Color buttonColorRed = const Color(0xffE60023);
