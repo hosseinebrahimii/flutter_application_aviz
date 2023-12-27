@@ -9,10 +9,16 @@ class ProgressIndicatorWidget extends StatelessWidget {
   final int percentage;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 4,
-      width: MediaQuery.of(context).size.width * percentage / 100,
-      color: AppColors.red,
+    return Row(
+      textDirection: TextDirection.rtl,
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          height: 4,
+          width: MediaQuery.of(context).size.width * percentage / 100,
+          color: AppColors.red,
+        ),
+      ],
     );
   }
 }
