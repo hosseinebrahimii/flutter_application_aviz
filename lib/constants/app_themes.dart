@@ -113,6 +113,12 @@ class AppThemes {
           fontSize: 14,
           color: AppColors.lighterGrey,
         ),
+        headlineSmall: TextStyle(
+          fontFamily: 'Shabnam',
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
+          color: AppColors.lightGrey,
+        ),
         // Shabnam 400 12 lightGrey
         labelSmall: TextStyle(
           fontFamily: 'Shabnam',
@@ -154,6 +160,13 @@ class AppThemes {
         fontFamily: 'SM',
         fontWeight: FontWeight.w500,
         fontSize: 18,
+        color: AppColors.lighterGrey,
+      ),
+      // Shabnam 400 16 lighterGrey
+      bodyMedium: TextStyle(
+        fontFamily: 'Shabnam',
+        fontWeight: FontWeight.w400,
+        fontSize: 16,
         color: AppColors.lighterGrey,
       ),
     ),
