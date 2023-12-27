@@ -13,7 +13,7 @@ class RegisterAdCategory2Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      appBar: _categoryAppBar(),
+      appBar: _registerAppBar(),
       body: SafeArea(
         child: Directionality(
           textDirection: TextDirection.rtl,
@@ -47,7 +47,7 @@ class RegisterAdCategory2Page extends StatelessWidget {
     );
   }
 
-  AppBar _categoryAppBar() {
+  AppBar _registerAppBar() {
     return AppBar(
       elevation: 0,
       toolbarHeight: 42,
