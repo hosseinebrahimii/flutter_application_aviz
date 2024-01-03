@@ -63,6 +63,13 @@ class AppThemes {
           color: AppColors.black,
           fontSize: 16,
         ),
+        // SM 500 16 black
+        labelLarge: TextStyle(
+          fontFamily: 'SM',
+          fontWeight: FontWeight.w500,
+          color: AppColors.black,
+          fontSize: 16,
+        ),
         // Shabnam 400 16 black
         headlineLarge: TextStyle(
           fontFamily: 'Shabnam',
