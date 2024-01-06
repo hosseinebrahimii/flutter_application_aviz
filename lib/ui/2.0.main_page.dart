@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
 import 'package:flutter_application_aviz/ui/2.1.aviz_ads_page.dart';
-import 'package:flutter_application_aviz/ui/2.2.0.register_ad_category1_page.dart';
+import 'package:flutter_application_aviz/ui/2.2.registering_ad_page.dart';
 import 'package:flutter_application_aviz/ui/2.4.profile_page.dart';
 
 //
 // this page controlls all the other pages and connects them with navigationBar.
+// after users login, they'll be navigated to this page
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -14,7 +15,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int currentIndex = 0;
+  int currentPageIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -28,26 +29,26 @@ class _MainPageState extends State<MainPage> {
           child: AnimatedSwitcher(
             duration: const Duration(milliseconds: 200),
             child: IndexedStack(
-              index: currentIndex,
+              index: currentPageIndex,
               key: UniqueKey(), // without key, animations won't work.
               children: [
                 // we use visibility widget to improve performance of the app
                 // we don't need background pages to be proccessed
                 Visibility(
-                  visible: currentIndex == 0,
+                  visible: currentPageIndex == 0,
                   child: const AvizAdsPage(),
                 ),
                 Visibility(
-                  visible: currentIndex == 1,
+                  visible: currentPageIndex == 1,
                   child: Container(),
                 ),
                 Visibility(
-                  visible: currentIndex == 2,
-                  child: RegisterAdCategory1Page(),
+                  visible: currentPageIndex == 2,
+                  child: const RegisteringAdPage(),
                 ),
 
                 Visibility(
-                  visible: currentIndex == 3,
+                  visible: currentPageIndex == 3,
                   child: const ProfilePage(),
                 ),
               ],
@@ -70,11 +71,13 @@ class _MainPageState extends State<MainPage> {
         selectedItemColor: AppColors.red,
         unselectedLabelStyle: Theme.of(context).textTheme.titleSmall,
         unselectedItemColor: AppColors.lighterGrey,
-        currentIndex: currentIndex,
+        currentIndex: currentPageIndex,
         onTap: (value) {
-          setState(() {
-            currentIndex = value;
-          });
+          if (currentPageIndex != value) {
+            setState(() {
+              currentPageIndex = value;
+            });
+          }
         },
         items: [
           BottomNavigationBarItem(
