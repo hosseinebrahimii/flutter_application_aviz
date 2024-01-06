@@ -11,12 +11,12 @@ class RegisteredAdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      appBar: _appBar(),
+      appBar: _appBar(context),
       body: _body(context),
     );
   }
 
-  AppBar _appBar() {
+  AppBar _appBar(BuildContext context) {
     return AppBar(
       elevation: 0,
       toolbarHeight: 42,
@@ -27,8 +27,13 @@ class RegisteredAdPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           textDirection: TextDirection.rtl,
           children: [
-            Image.asset(
-              'assets/images/arrowRight.png',
+            GestureDetector(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Image.asset(
+                'assets/images/arrowRight.png',
+              ),
             ),
             const Spacer(),
             Image.asset(
@@ -60,7 +65,10 @@ class RegisteredAdPage extends StatelessWidget {
           textDirection: TextDirection.rtl,
           child: Stack(
             alignment: Alignment.bottomCenter,
-            children: [_adInfo(context), _buttons()],
+            children: [
+              _adInfo(context),
+              _buttons(),
+            ],
           ),
         ),
       ),
