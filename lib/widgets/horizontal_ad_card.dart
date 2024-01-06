@@ -6,11 +6,13 @@ import 'package:flutter_application_aviz/widgets/cached_image.dart';
 class HorizontalAdCard extends StatelessWidget {
   const HorizontalAdCard({
     super.key,
+    required this.onTap,
     required this.imageUrl,
     required this.title,
     required this.body,
     required this.price,
   });
+  final void Function() onTap;
   final String imageUrl;
   final String title;
   final String body;
@@ -19,13 +21,16 @@ class HorizontalAdCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: Column(
-        children: [
-          _adBox(context),
-          const SizedBox(
-            height: 16,
-          )
-        ],
+      child: GestureDetector(
+        onTap: onTap,
+        child: Column(
+          children: [
+            _adBox(context),
+            const SizedBox(
+              height: 16,
+            )
+          ],
+        ),
       ),
     );
   }

@@ -6,11 +6,13 @@ import 'package:flutter_application_aviz/widgets/cached_image.dart';
 class VerticalAdCard extends StatelessWidget {
   const VerticalAdCard({
     super.key,
+    required this.onTap,
     required this.imageUrl,
     required this.title,
     required this.body,
     required this.price,
   });
+  final void Function() onTap;
   final String imageUrl;
   final String title;
   final String body;
@@ -19,7 +21,7 @@ class VerticalAdCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: Row(
