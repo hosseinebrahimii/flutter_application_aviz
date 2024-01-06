@@ -6,14 +6,14 @@ import 'package:flutter_application_aviz/widgets/item_checker.dart';
 import 'package:flutter_application_aviz/widgets/progress_indicator.dart';
 import 'package:flutter_application_aviz/widgets/property_textfield.dart';
 
-class RegisterAdPage extends StatefulWidget {
-  const RegisterAdPage({super.key});
+class RegisteringAdPage extends StatefulWidget {
+  const RegisteringAdPage({super.key});
 
   @override
-  State<RegisterAdPage> createState() => _RegisterAdPageState();
+  State<RegisteringAdPage> createState() => _RegisteringAdPageState();
 }
 
-class _RegisterAdPageState extends State<RegisterAdPage> {
+class _RegisteringAdPageState extends State<RegisteringAdPage> {
   int pageSectionIndex = 0;
 
   @override
