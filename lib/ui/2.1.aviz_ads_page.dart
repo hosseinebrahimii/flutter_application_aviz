@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
+import 'package:flutter_application_aviz/ui/3.1.registered_ad_page.dart.dart';
 import 'package:flutter_application_aviz/widgets/horizontal_ad_card.dart';
 import 'package:flutter_application_aviz/widgets/vertical_ad_card.dart';
 
@@ -72,7 +73,14 @@ class AvizAdsPage extends StatelessWidget {
             //padding is only 'right' because on the end left, we have sizedBox with 16 width.
             padding: const EdgeInsets.only(right: 16),
             itemBuilder: (BuildContext context, int index) {
-              return const VerticalAdCard(
+              return VerticalAdCard(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const RegisteredAdPage(),
+                    ),
+                  );
+                },
                 imageUrl: '',
                 title: 'ویلا 500 متری زیر قیمت',
                 body: 'ویو عالی، سند تک برگ، سال ساخت ۱۴۰۲، تحویل فوری',
@@ -113,7 +121,14 @@ class AvizAdsPage extends StatelessWidget {
             itemCount: 3,
             physics: const BouncingScrollPhysics(),
             itemBuilder: (BuildContext context, int index) {
-              return const HorizontalAdCard(
+              return HorizontalAdCard(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) => const RegisteredAdPage(),
+                    ),
+                  );
+                },
                 imageUrl: '',
                 title: 'واحد دوبلکس فول امکانات',
                 body: 'سال ساخت ۱۳۹۸، سند تک برگ، دوبلکس تجهیزات کامل',
