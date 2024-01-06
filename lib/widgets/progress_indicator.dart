@@ -13,7 +13,8 @@ class ProgressIndicatorWidget extends StatelessWidget {
       textDirection: TextDirection.rtl,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Container(
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 200),
           height: 4,
           width: MediaQuery.of(context).size.width * percentage / 100,
           color: AppColors.red,
