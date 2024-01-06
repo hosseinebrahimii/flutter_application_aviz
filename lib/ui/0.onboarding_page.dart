@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
 
+//
+//this page welcomes users with basic information about the app
 class OnboardingPage extends StatelessWidget {
   const OnboardingPage({super.key});
 
