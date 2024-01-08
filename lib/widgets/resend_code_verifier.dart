@@ -7,10 +7,10 @@ class ResendCodeVerifier extends StatefulWidget {
   const ResendCodeVerifier({
     super.key,
     required this.timer,
-    this.onTap,
+    required this.onTap,
   });
   final int timer;
-  final void Function()? onTap;
+  final void Function() onTap;
   @override
   State<ResendCodeVerifier> createState() => _ResendCodeVerifierState();
 }
@@ -27,11 +27,18 @@ class _ResendCodeVerifierState extends State<ResendCodeVerifier> {
           seconds: widget.timer,
           controller: _controller,
           build: (BuildContext context, double time) {
-            return timeFormatChecker(time);
+            return Text(
+              timeFormatChecker(time),
+              style: time == 0
+                  ? AppThemes.secondaryTheme.textTheme.bodyLarge
+                  : AppThemes.secondaryTheme.textTheme.titleLarge,
+            );
           },
           interval: const Duration(milliseconds: 100),
           onFinished: () {
-            setState(() {});
+            setState(() {
+              widget.onTap;
+            });
           },
         ),
         const SizedBox(
@@ -58,54 +65,35 @@ class _ResendCodeVerifierState extends State<ResendCodeVerifier> {
       ],
     );
   }
-}
 
-Text timeFormatChecker(double time) {
-  //more than 1 min:
-  if (time >= 60) {
-    double minuteCounter = (time / 60).floorToDouble();
-    double secondCounter = time - minuteCounter * 60;
-    if (minuteCounter < 10 && secondCounter < 10) {
-      return Text(
-        '0${minuteCounter.toStringAsFixed(0)}:0${secondCounter.toStringAsFixed(0)}',
-        style: AppThemes.secondaryTheme.textTheme.titleLarge,
-      );
-    } else if (secondCounter < 10) {
-      return Text(
-        '${minuteCounter.toStringAsFixed(0)}:0${secondCounter.toStringAsFixed(0)}',
-        style: AppThemes.secondaryTheme.textTheme.titleLarge,
-      );
-    } else if (minuteCounter < 10) {
-      return Text(
-        '0${minuteCounter.toStringAsFixed(0)}:${secondCounter.toStringAsFixed(0)}',
-        style: AppThemes.secondaryTheme.textTheme.titleLarge,
-      );
-    } else {
-      return Text(
-        '${minuteCounter.toStringAsFixed(0)}:${secondCounter.toStringAsFixed(0)}',
-        style: AppThemes.secondaryTheme.textTheme.titleLarge,
-      );
+// this method returns time in a proper format:
+  String timeFormatChecker(double time) {
+    //more than 1 min:
+    if (time >= 60) {
+      int minuteCounter = (time.floor() / 60).floor();
+      int secondCounter = time.floor() - minuteCounter * 60;
+
+      if (minuteCounter < 10 && secondCounter < 10) {
+        return '0$minuteCounter:0$secondCounter';
+      } else if (secondCounter < 10) {
+        return '$minuteCounter:0$secondCounter';
+      } else if (minuteCounter < 10) {
+        return '0$minuteCounter:$secondCounter';
+      } else {
+        return '$minuteCounter:$secondCounter';
+      }
     }
-  }
-  // less than 1 min:
-  else if (time > 0) {
-    if (time < 10) {
-      return Text(
-        '00:0${time.toStringAsFixed(0)}',
-        style: AppThemes.secondaryTheme.textTheme.titleLarge,
-      );
-    } else {
-      return Text(
-        '00:${time.toStringAsFixed(0)}',
-        style: AppThemes.secondaryTheme.textTheme.titleLarge,
-      );
+    // less than 1 min:
+    else {
+      int secondCounter = time.floor();
+
+      if (secondCounter == 60) {
+        return '01:00';
+      } else if (secondCounter < 10) {
+        return '00:0$secondCounter';
+      } else {
+        return '00:$secondCounter';
+      }
     }
-  }
-  //time == 0
-  else {
-    return Text(
-      '00:00',
-      style: AppThemes.secondaryTheme.textTheme.bodyLarge,
-    );
   }
 }
