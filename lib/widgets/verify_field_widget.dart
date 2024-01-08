@@ -69,6 +69,7 @@ class _VerifyFieldWidgetState extends State<VerifyFieldWidget> {
                     isFilled[i] = true;
                   });
                 }
+                // when removing number:
                 if (value.isEmpty) {
                   if (i != 0) {
                     widget.focusNodes[i - 1].requestFocus();
