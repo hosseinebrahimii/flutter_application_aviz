@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
+import 'package:flutter_application_aviz/ui/2.0.main_page.dart';
+import 'package:flutter_application_aviz/util/navigation_handler.dart';
 import 'package:flutter_application_aviz/widgets/resend_code_verifier.dart';
 import 'package:flutter_application_aviz/widgets/verify_field_widget.dart';
 
@@ -40,7 +42,7 @@ class SignUpVerifyPage extends StatelessWidget {
                 ),
                 const Spacer(),
                 //a button for applying and verifying the 4 digit code:
-                applyButton(),
+                applyButton(context),
                 const SizedBox(
                   height: 32,
                 ),
@@ -71,11 +73,18 @@ class SignUpVerifyPage extends StatelessWidget {
     );
   }
 
-  Widget applyButton() {
+  Widget applyButton(BuildContext context) {
     return SizedBox(
       height: 40,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          if (VerifyFieldWidget.code.length == 4) {
+            Navigation.pushAndRemoveUntil(
+              context,
+              route: const MainPage(),
+            );
+          }
+        },
         child: const Text('تایید ثبت ‌نام'),
       ),
     );

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_themes.dart';
-import 'package:flutter_application_aviz/ui/2.0.main_page.dart';
+import 'package:flutter_application_aviz/ui/0.onboarding_page.dart';
 
 void main() {
   runApp(const AvizApp());
@@ -14,7 +14,7 @@ class AvizApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Aviz',
       theme: AppThemes.mainTheme(),
-      home: const MainPage(),
+      home: const OnboardingPage(),
     );
   }
 }

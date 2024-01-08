@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
+import 'package:flutter_application_aviz/ui/1.1.sign_in_page.dart';
+import 'package:flutter_application_aviz/ui/1.3.sign_up_page.dart';
+import 'package:flutter_application_aviz/util/navigation_handler.dart';
 
 //
 //this page welcomes users with basic information about the app
@@ -114,7 +117,12 @@ class OnboardingPage extends StatelessWidget {
       width: 159,
       height: 40,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigation.push(
+            context,
+            route: SignUpPage(),
+          );
+        },
         child: const Text('ثبت نام'),
       ),
     );
@@ -125,7 +133,12 @@ class OnboardingPage extends StatelessWidget {
       width: 159,
       height: 40,
       child: OutlinedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigation.push(
+            context,
+            route: SignInPage(),
+          );
+        },
         child: const Text('ورود'),
       ),
     );

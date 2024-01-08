@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_aviz/constants/app_colors.dart';
+import 'package:flutter_application_aviz/ui/1.2.sign_in_verify_page.dart';
+import 'package:flutter_application_aviz/ui/1.3.sign_up_page.dart';
+import 'package:flutter_application_aviz/util/navigation_handler.dart';
 
 class SignInPage extends StatelessWidget {
   SignInPage({super.key});
@@ -30,7 +33,7 @@ class SignInPage extends StatelessWidget {
                   _numberController,
                 ),
                 const Spacer(),
-                nextStepButton(),
+                nextStepButton(context),
                 const SizedBox(
                   height: 16,
                 ),
@@ -87,11 +90,16 @@ class SignInPage extends StatelessWidget {
     );
   }
 
-  Widget nextStepButton() {
+  Widget nextStepButton(BuildContext context) {
     return SizedBox(
       height: 40,
       child: ElevatedButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigation.push(
+            context,
+            route: const SignInVerifyPage(),
+          );
+        },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
@@ -105,7 +113,12 @@ class SignInPage extends StatelessWidget {
 
   Widget signUpText(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigation.pushReplace(
+          context,
+          route: SignUpPage(),
+        );
+      },
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
