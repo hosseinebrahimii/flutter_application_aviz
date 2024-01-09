@@ -92,7 +92,6 @@ class SignUpPage extends StatelessWidget {
       borderRadius: BorderRadius.circular(4),
       child: TextField(
         controller: controller,
-        keyboardType: TextInputType.number,
         decoration: const InputDecoration(
           //other decoration options were tuned in theme in them main.dart file
           hintText: 'نام و نام خانوادگی',
