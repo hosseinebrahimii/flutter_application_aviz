@@ -1,16 +1,13 @@
 # flutter_application_aviz
 
-this is a work in progress,
-this app is a palce where you can trade real states throw ads.
-## Getting Started
+'Aviz' app is a place where you can trade real states.
+This project is a work in progress and is still under develop, right now initial UI is completed.
+here's the result:
 
-This project is a starting point for a Flutter application.
+https://github.com/hosseinebrahimii/flutter_application_aviz/assets/131548703/d41daff9-9866-4835-bf24-aa8de726410a
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+
